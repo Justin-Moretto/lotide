@@ -17,7 +17,7 @@ const eqArrays = function(arr1, arr2) {
   }
   //console.log(pass);
   return pass;
-}
+};
 
 eqArrays([1, 2, 3], [1, 2, 3]) // => true
 eqArrays([1, 2, 3], [3, 2, 1]) // => false
