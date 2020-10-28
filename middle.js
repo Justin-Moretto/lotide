@@ -8,7 +8,7 @@ const eqArrays = function(arr1, arr2) {
   }
   //console.log(pass);
   return pass;
-}
+};
 
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2) === true) {
@@ -16,7 +16,24 @@ const assertArraysEqual = function(arr1, arr2) {
   } else {
     console.log(`✖️ Assertion Failed: ${arr1} === ${arr2}`);
   }
-}
+};
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [5, 5, 5]);
+// ACTUAL FUNCTION
+const middle = function(array) {
+  let output = [];
+  let mid = Math.floor(array.length / 2);
+  if (array.length <= 2) {
+    return output;
+  } else if (array.length % 2 === 0) { //is array length even number?
+    output.push(array[mid - 1]);
+    output.push(array[mid]);
+  } else { //it is an odd number
+    output.push(array[mid]);
+  }
+  return output;
+};
+
+// TEST CODE
+//console.log(middle([1, 2, 3, 4, 5]));
+//console.log(middle([1, 2, 3, 4, 5, 6]));
+//console.log(middle([1, 2]));
