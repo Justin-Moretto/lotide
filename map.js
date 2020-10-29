@@ -17,6 +17,23 @@ const assertArraysEqual = function(arr1, arr2) {
     console.log(`✖️ Assertion Failed: ${arr1} === ${arr2}`);
   }
 };
+///-------------map--------------------------
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [5, 5, 5]);
+const map = function(array, callback) {
+  const results = [];
+  for (let item of array) {
+    results.push(callback(item));
+  }
+  return results;
+};
+
+
+//test
+const words = ["ground", "control", "to", "major", "tom"];
+
+const results1 = map(words, word => word[0]);
+console.log(results1);
+
+console.log(map(words, word => word[word.length - 1]));
+console.log(map(words, word => word + "ino"));
+console.log(map(words, word => word.length));
