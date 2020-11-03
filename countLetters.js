@@ -23,3 +23,5 @@ const countLetters = function(input) {
 
 //test
 console.log(countLetters(args));
+
+module.exports = countLetters;

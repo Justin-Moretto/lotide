@@ -34,3 +34,5 @@ const flatten = function(input) {
 
 //test case
 console.log(flatten([1, 2, [3, 4], 5, [6, 7]]));
+
+module.exports = flatten;

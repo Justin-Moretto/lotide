@@ -37,3 +37,5 @@ console.log(results1);
 console.log(map(words, word => word[word.length - 1]));
 console.log(map(words, word => word + "ino"));
 console.log(map(words, word => word.length));
+
+module.exports = map;
